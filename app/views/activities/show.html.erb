@@ -3,6 +3,12 @@
   <%= @activity.name %>
 </p>
 
+<% Activity::ACTIVITIES.each do |acti| %>
+    <% if acti == @activity.name %>
+        <p><%= Activity::IMAGES[@activity.name] %></p>
+    <% end %>
+<% end %>
+
 <p>
   <strong>Description:</strong>
   <%= @activity.description %>
