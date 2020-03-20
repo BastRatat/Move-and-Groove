@@ -4,7 +4,11 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-    @activities = Activity.where(:user_id => current_user.id)
+    if user_signed_in?
+      @activities = Activity.where(:user_id => current_user.id)
+    else
+      @activities = Activity.all
+    end
   end
 
   # GET /activities/1
