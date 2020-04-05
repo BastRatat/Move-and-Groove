@@ -16,5 +16,4 @@ class Activity < ApplicationRecord
     'Sailing' => '9',
     'Badminton' => '10'
   }
-
 end
