@@ -1,8 +1,12 @@
 <p>
-  <strong>Name:</strong>
   <%= @activity.name %>
 </p>
-
+<p>
+    By <%= @activity.user.first_name %> <%= @activity.user.last_name %>
+</p>
+<p>
+    <%= image_tag @activity.user.avatar.url, class: 'user-avatar' %>
+</p>
 <% Activity::ACTIVITIES.each do |acti| %>
     <% if acti == @activity.name %>
         <p><%= image_tag Activity::IMAGES[@activity.name], class: 'activity-img img-fluid shadow' %></p>
