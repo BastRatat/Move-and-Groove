@@ -68,6 +68,7 @@ class ActivitiesController < ApplicationController
   end
 
   private
+
     # Only allow a list of trusted parameters through.
     def activity_params
       params.require(:activity).permit(:name, :description, :duration, :date, :time)

@@ -7707,3 +7707,136 @@ Processing by ActivitiesController#show as HTML
 Completed 200 OK in 68ms (Views: 62.4ms | ActiveRecord: 0.8ms | Allocations: 11309)
 
 
+Started GET "/" for ::1 at 2020-04-06 11:12:33 +0200
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 355)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 220ms (Views: 203.2ms | ActiveRecord: 0.0ms | Allocations: 21899)
+
+
+Started GET "/" for ::1 at 2020-04-06 11:12:35 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.0ms | Allocations: 6354)
+
+
+Started GET "/" for ::1 at 2020-04-06 11:20:05 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.0ms | Allocations: 7504)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-04-06 11:20:06 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 618)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 50.0ms | Allocations: 8421)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 106.4ms | ActiveRecord: 1.4ms | Allocations: 26652)
+
+
+Started GET "/" for ::1 at 2020-04-06 11:20:07 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.0ms | Allocations: 6364)
+
+
+Started GET "/activities" for ::1 at 2020-04-06 11:20:15 +0200
+Processing by ActivitiesController#index as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 2483)
+
+
+  
+NoMethodError (undefined method `isadmin?' for nil:NilClass):
+  
+app/models/ability.rb:12:in `initialize'
+Started GET "/" for ::1 at 2020-04-06 11:21:03 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms | Allocations: 64481)
+
+
+  
+NoMethodError (undefined method `logged_in?' for #<PagesController:0x000000000d4d4128>
+Did you mean?  logger):
+  
+app/controllers/application_controller.rb:7:in `herd_user'
+Started GET "/" for ::1 at 2020-04-06 11:21:27 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.0ms | Allocations: 64436)
+
+
+  
+NoMethodError (undefined method `current_user?' for #<PagesController:0x0000000008e15c00>
+Did you mean?  current_user):
+  
+app/controllers/application_controller.rb:7:in `herd_user'
+Started GET "/" for ::1 at 2020-04-06 11:21:54 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (C:/Users/Bastien/Desktop/FULL STACK DEVELOPER/6. TRACK YOUR FITNESS HABITS/assessment/Move-and-Groove/app/controllers/application_controller.rb:8: syntax error, unexpected end
+    end
+    ^~~
+C:/Users/Bastien/Desktop/FULL STACK DEVELOPER/6. TRACK YOUR FITNESS HABITS/assessment/Move-and-Groove/app/controllers/application_controller.rb:20: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/application_controller.rb:8: syntax error, unexpected end
+app/controllers/application_controller.rb:20: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:8: syntax error, unexpected end
+app/controllers/application_controller.rb:20: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:8: syntax error, unexpected end
+app/controllers/application_controller.rb:20: syntax error, unexpected end-of-input, expecting end
+app/controllers/pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2020-04-06 11:22:01 +0200
+Started GET "/" for ::1 at 2020-04-06 11:23:53 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#index as HTML
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 74.9ms | ActiveRecord: 0.0ms | Allocations: 13009)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 84.5ms | ActiveRecord: 0.0ms | Allocations: 14011)
+
+
+Started GET "/" for ::1 at 2020-04-06 11:23:54 +0200
+Started GET "/" for ::1 at 2020-04-06 11:23:54 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 178ms (Views: 177.2ms | ActiveRecord: 0.0ms | Allocations: 6516)
+
+
+Started GET "/" for ::1 at 2020-04-06 11:23:54 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 85.1ms | ActiveRecord: 0.0ms | Allocations: 6536)
+
+
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms | Allocations: 6362)
+
+
+Started GET "/" for ::1 at 2020-04-06 11:26:33 +0200

@@ -4,13 +4,14 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, Activity
+    cannot :read, Activity
 
     if user.present?
         can :manage, Activity, user_id: user.id
         can :manage, User, user_id: user.id
-    elsif user.isadmin?  # additional permissions for administrators
-        can :manage, :all
+        if user.isadmin?  # additional permissions for administrators
+            can :manage, :all
+        end
     end
     #   Define abilities for the passed in user here. For example:
     #
