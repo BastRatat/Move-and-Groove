@@ -20,6 +20,8 @@
         <div id="navbar">
           <ul class="nav navbar-nav">
             <li><%= link_to 'HOME', root_path %></li>
+            <li><%= link_to 'ABOUT', about_path %></li>
+            <hr>
             <% if current_user %>
 				      <li><%= link_to 'MY ACTIVITIES', activities_path %></li>
 			      <% end %>
