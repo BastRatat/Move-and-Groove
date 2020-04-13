@@ -1,25 +1,26 @@
-<h1>Activities</h1>
+<h2 class="sub-title text-center">Activities</h2>
 <% if user_signed_in? %>
-  <table>
-    <thead>
-      <tr>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
+  <div class="container">
+    <div class="row pt-5 pb-5">
       <% @activities.each do |activity| %>
-        <tr>
-            <td><%= activity.name %></td>
-            <td><%= link_to 'Show', activity %></td>
-            <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-            <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+        <div class="col col-xs-12 col-sm-12 col-md-6 activity-card shadow-lg pr-2 mb-3 activity-border">
+          <h4 class="card-title text-center font-weigth-bold pt-2"><%= activity.name.upcase %></h4>
+          <% Activity::ACTIVITIES.each do |acti| %>
+            <% if acti == activity.name %>
+              <p class="text-center"><%= image_tag Activity::IMAGES[activity.name], class: 'activity-img img-fluid shadow' %></p>
+              <% end %>
+            <% end %>
+            <ul class="list-unstyled pl-4">
+              <li class="card-text text-center"><%= link_to 'View', activity, class: 'index-links' %></li>
+              <li class="card-text text-center"><%= link_to 'Edit', edit_activity_path(activity), class: 'index-links' %></li>
+              <li class="card-text text-center"><%= link_to 'Delete', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'index-links' %></li>
+            </ul>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+  </div>
 
-  <br>
+<br>
 
-  <%= link_to 'New Activity', new_activity_path %>
+<h4><%= link_to 'New Activity', new_activity_path, class: 'add_activity font-weight-bold' %></h4>
 <% end %>

@@ -12,31 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <h6><%= form.label :name %></h6>
     <%= form.select(:name, Activity::ACTIVITIES) %>
   </div>
+  </br>
 
   <div class="field">
-    <%= form.label :duration %>
+    <h6><%= form.label :duration %></h6>
     <%= form.select(:duration, Activity::DURATION) %>
   </div>
+  </br>
 
   <div class="field">
-    <%= form.label :date %>
+    <h6><%= form.label :date %></h6>
     <%= form.date_field :date %>
   </div>
+  </br>
 
   <div class="field">
-    <%= form.label :time %>
+    <h6><%= form.label :time %></h6>
     <%= form.time_field :time %>
   </div>
+  </br>
 
   <div class="field">
-    <%= form.label :description %>
+    <h6><%= form.label :description, class: 'text-justify' %></h6>
     <%= form.text_area :description %>
   </div>
+  </br>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+  </br>
 <% end %>

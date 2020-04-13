@@ -4,7 +4,7 @@
     <title>Move & Groove</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="icon" href="https://i.ibb.co/vqtpMHr/logo.png">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,13 +14,14 @@
     <nav class="navbar navbar-inverse bg-dark font-weight-bold">
       <div class="container">
         <div class="navbar-header">
+          <%= image_tag 'logo', class: 'navbar-logo' %>
           <%= link_to 'Move & Groove', root_path, class: 'navbar-brand' %>
         </div>
         <div id="navbar">
           <ul class="nav navbar-nav">
-            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'HOME', root_path %></li>
             <% if current_user %>
-				      <li><%= link_to 'Activities', activities_path %></li>
+				      <li><%= link_to 'MY ACTIVITIES', activities_path %></li>
 			      <% end %>
           </ul>
           <ul class="nav navbar-nav pull-right">
@@ -47,7 +48,7 @@
       </nav>
 
     <div class="container-fluid jumbotron">
-        <h1 class="header text-center">UNLEASH YOUR POTENTIAL</h1>
+        <h1 class="header text-center">UNLEASH YOUR <span class="keyword">POTENTIAL</span></h1>
     </div>
 
     <div class="container">
@@ -58,6 +59,8 @@
       <% end %>
     </div>
     <%= yield :top_content %>
+
+    <hr>
 
     <div class="container">
       <h1><%= yield :header %></h1>
@@ -74,7 +77,7 @@
             </div>
         </div>
         <div class="card shadow-lg pr-2">
-            <h4 class="card-title text-center pt-3 pb-3 font-weigth-bold">MANAGE YOUR ROUTINE</h4>
+            <h4 class="card-title text-center pt-3 pb-3 font-weigth-bold">BUILD YOUR WORKOUT</h4>
             <p><%= image_tag "card2", class: 'activity-img img-fluid shadow d-block mx-auto' %></p>
             <div class="card-body">
                 <p class="card-text text-justify ">Move & Groove is helping thousand of people to keep motivated by adding daily workout routine. Pick an activity and schedule it at the best time for you. We offer you the best experience to help you with building a strong sport routine!</p>
@@ -92,7 +95,7 @@
 
     <footer class="container-fluid bg-light">
       <div class="text-center py-3">© 2020 Copyright:
-        <h6 class="font-weight-bold">Bastien RATAT</h6>
+        <h6 class="footer-name font-weight-bold">Bastien RATAT</h6>
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

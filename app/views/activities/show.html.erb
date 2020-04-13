@@ -1,20 +1,33 @@
-<p>
-  <%= @activity.name %>
-</p>
-<p>
-    By <%= @activity.user.first_name %> <%= @activity.user.last_name %>
-</p>
-<p>
-    <%= image_tag @activity.user.avatar.url, class: 'user-avatar' %>
-</p>
-<% Activity::ACTIVITIES.each do |acti| %>
-    <% if acti == @activity.name %>
-        <p><%= image_tag Activity::IMAGES[@activity.name], class: 'activity-img img-fluid shadow' %></p>
-    <% end %>
-<% end %>
+<h4 class="text-center text-white mt-5"><%= @activity.name.upcase %></h4>
 
-<p>
-  <%= @activity.description %>
-</p>
+<div class="user mt-4">
+    <p class="text-white pl-3 text-center">By <span class="font-weight-bold user-name"><%= @activity.user.first_name %> <%= @activity.user.last_name %></span></p>
+    <p class="pl-3 text-center"><%= image_tag @activity.user.avatar.url, class: 'user-avatar img-fluid rounded' %></p>
+    <hr>
+</div>
 
-<%= link_to 'Back', activities_path %>
+<div class="container">
+    <div class="row">
+        <% Activity::ACTIVITIES.each do |acti| %>
+            <% if acti == @activity.name %>
+                <p class="col-xs-12 col-sm-12 col-md-6"><%= image_tag Activity::IMAGES[@activity.name], class: 'activity-img img-fluid shadow' %></p>
+            <% end %>
+        <% end %>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <h5 class="text-white">Notes</h5>
+            <p class="text-white text-justify"><%= @activity.description %></p>
+            <hr>
+            <h5 class="text-white">Information</h5>
+            <ul class="list-unstyled">
+                <li class="text-white"><span class="infos font-weight-bold">Duration :</span> <%= @activity.duration %></li>
+                <li class="text-white"><span class="infos font-weight-bold">Date: </span> <%= @activity.date %></li>
+                <li class="text-white"><span class="infos font-weight-bold">Time: </span> <%= @activity.time.to_s[11,12] %></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<%= link_to 'BACK', activities_path %>
+<span class="infos"></span>

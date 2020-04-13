@@ -24,6 +24,11 @@
     background-color: #2a2e36;
 }
 
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+}
+
 a.navbar-brand {
     font-family: 'Slabo 27px', serif;
     color: #7fcd91;
@@ -48,7 +53,7 @@ a.navbar-brand:hover {
 }
 
 .header {
-    color: #7fcd91;
+    color: #5b5656;
     font-family: 'Slabo 27px', serif;
     letter-spacing: 2px;
 }
@@ -61,13 +66,13 @@ a.navbar-brand:hover {
 }
 
 .card-text {
-    color: #7fcd91;
+    color: #2a2e36;
     font-family: 'Montserrat', sans-serif;
 }
 
 div.card {
     border: 1px solid #7fcd91;
-    background-color: #5b5656;
+    background-color: #e9ecef;
 }
 
 
@@ -125,9 +130,37 @@ div.alert.alert-notice {
 }
 
 .links {
+    color: #7fcd91 !important;
+}
+
+.links:hover {
     color: white !important;
 }
 
 .profile {
+    color: #7fcd91;
+}
+
+hr {
+    border-top: 1px solid #7fcd91 !important;
+}
+
+.keyword {
+    color: #7fcd91;
+}
+
+.index-links {
+    color: white !important;
+}
+
+h6.footer-name {
+    color: black !important;
+}
+
+.user-name {
+    color: #7fcd91;
+}
+
+.infos {
     color: #7fcd91;
 }
